@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap");
+
+/* VARIABLES */
+// font-family
+$body-font: "Open Sans", sans-serif;
+$special-font: "Bangers", cursive;
+
+// colors
+$font-col_main: rgb(51, 51, 51);
+$font-col_white: rgb(241, 241, 241);
+$main_bg: rgb(205, 232, 206);
+$btn_bg: rgb(81, 115, 83);
+
+div.loader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $main_bg;
+  z-index: 999;
+  transition: left 0.5s ease-in-out;
+
+  &:before {
+    position: absolute;
+    content: "";
+    background: url("../../assets/loader.svg") bottom center no-repeat;
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+html {
+  height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-size: 10px;
+  background: $main_bg;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: $body-font;
+  text-align: center;
+  color: $font-col_main;
+}
+
+h1 {
+  margin-bottom: 0;
+  padding-top: 4rem;
+  font-family: $special-font;
+  font-size: 5rem;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 2px;
+
+  @media screen and (min-width: 320px) {
+    font-size: calc(50px + (100 - 50) * ((100vw - 320px) / (1440 - 320)));
+    letter-spacing: calc(2px + (5 - 2) * ((100vw - 320px) / (1440 - 320)));
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 10rem;
+    letter-spacing: 5px;
+  }
+}
+
+h2 {
+  font-size: 1.8rem;
+
+  @media screen and (min-width: 320px) {
+    font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1440 - 320)));
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 2.5rem;
+  }
+}
+
+button {
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  margin-bottom: 2.5rem;
+  background-color: $btn_bg;
+  color: $font-col_white;
+  font-size: 3.2rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  @media screen and (min-width: 320px) {
+    margin-top: calc(30px + (60 - 30) * ((100vw - 320px) / (1440 - 320)));
+    margin-bottom: calc(25px + (50 - 25) * ((100vw - 320px) / (1440 - 320)));
+    font-size: calc(25px + (32 - 25) * ((100vw - 320px) / (1440 - 320)));
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+  }
+
+  &:hover {
+    background-color: darken($btn_bg, 10%);
+  }
+}
+
+.box {
+  display: block;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background: lighten($main_bg, 6%);
+  font-size: 2.5rem;
+  border-radius: 0.3rem;
+}
+
+.game {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 10%;
+
+  &__info {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.hole {
+  flex: 1 0 33.33333%;
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+    display: block;
+    background: url("../../assets/dirt.svg") bottom center no-repeat;
+    background-size: contain;
+    content: "";
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    bottom: -1.8rem;
+
+    @media screen and (min-width: 320px) {
+      bottom: calc(-18px + (-30 - (-18)) * ((100vw - 320px) / (600 - 320)));
+    }
+
+    @media screen and (min-width: 600px) {
+      bottom: -3rem;
+    }
+  }
+}
+
+.mole {
+  background: url("../../assets/mole.svg") bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+
+.hole.up .mole {
+  top: 0;
+}

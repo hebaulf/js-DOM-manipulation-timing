@@ -1,0 +1,22 @@
+{
+  "name": "js-dom-manipulation-timing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch style/sass:style/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hebaulf/js-DOM-manipulation-timing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hebaulf/js-DOM-manipulation-timing/issues"
+  },
+  "homepage": "https://github.com/hebaulf/js-DOM-manipulation-timing#readme",
+  "devDependencies": {
+    "sass": "^1.42.0"
+  }
+}

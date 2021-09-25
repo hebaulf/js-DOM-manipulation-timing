@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack a Mole</title>
+    <link rel="stylesheet" href="style/css/style.css">
+</head>
+<body>
+    <div class="loader" style="visibility: visible; opacity: 1; transition: all .3s ease-in-out;"></div>
+
+    <header>
+        <h1>Whack-a-mole!</h1>
+    </header>
+    
+    <main>
+        <!-- Start/End game button  -->
+        <button class="toggle__game">Start Game</button>
+
+
+        <div class="game__info">
+            <!-- Game score board  -->
+            <div class="game__score">
+                <h2>Score</h2>
+                <div><span class="box score">0</span></div>
+            </div>
+
+            <!-- Game timer  -->
+            <div class="timer">
+                <div class="display">
+                <h2>Timer</h2>
+                <div><span class="box display__time-left">20</span></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Whack a mole game  -->
+        <div class="game">
+            <!-- Holes and moles  -->
+            <div class="hole hole1">
+                <div class="mole"></div>
+            </div>
+            <div class="hole hole2">
+                <div class="mole"></div>
+            </div>
+            <div class="hole hole3">
+                <div class="mole"></div>
+            </div>
+            <div class="hole hole4">
+                <div class="mole"></div>
+            </div>
+            <div class="hole hole5">
+                <div class="mole"></div>
+            </div>
+            <div class="hole hole6">
+                <div class="mole"></div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="/js/script.js"></script>
+</body>
+</html>
