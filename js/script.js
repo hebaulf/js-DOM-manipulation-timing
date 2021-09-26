@@ -5,7 +5,7 @@
 setTimeout(() => { // set timeout for changing styles of .loader element
     document.querySelector('.loader').style.visibility = 'hidden'; // Change visibility from visible o hidden
     document.querySelector('.loader').style.opacity = '0'; // Change opacity from 1 to 0
-}, 1000); // 1000ms (or 1 sec) timeout
+}, 2000); // 1000ms (or 1 sec) timeout
 
 
 // CODE FOR THE COUNTDOWN TIMER FOR GAME

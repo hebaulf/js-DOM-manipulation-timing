@@ -1,0 +1,25 @@
+$main_bg: rgb(205, 232, 206);
+
+div.loader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $main_bg;
+  z-index: 999;
+  transition: left 0.5s ease-in-out;
+
+  &:before {
+    position: absolute;
+    content: "";
+    background: url("../../assets/loader.svg") bottom center no-repeat;
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
