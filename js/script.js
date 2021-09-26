@@ -106,7 +106,6 @@ moles.forEach(mole => mole.addEventListener('click', bonk));
 
 
 let timeout; // Create a variable for timeout
-
 // Start game function
 function startGame() {
     scoreBoard.textContent = 0; // scoreboard text set to 0
@@ -114,7 +113,7 @@ function startGame() {
     score = 0; // Score set to 0
     peep(); // Call peep() function
     clearInterval(timeout); // Clear timeout for countdown
-    timeout = setTimeout(() => {timeUp = true}, 20000); // Set timeout for game to 20sec
+    timeout = setTimeout(() => {timeUp = true}, 20000); // Set timeout for game to 20sec (2000ms)
     timer(20); // set 20 sec on timer
 }
 
